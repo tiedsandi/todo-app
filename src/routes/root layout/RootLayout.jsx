@@ -1,12 +1,16 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from '../../components/header/Header';
+
+import MainNavigation from '../../components/main navigation/MainNavigation';
+import classes from './RootLayout.module.css';
 
 const RootLayout = () => {
   return (
     <>
-      <Header />
-      <Outlet />
+      <MainNavigation />
+      <main className={classes.main}>
+        <Outlet />
+      </main>
     </>
   );
 };

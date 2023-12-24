@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 
-import classes from './Header.module.css';
+import classes from './MainNavigation.module.css';
 
-const Header = () => {
+const MainNavigation = () => {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>React Meetups</div>
@@ -23,4 +23,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainNavigation;
