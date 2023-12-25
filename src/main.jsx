@@ -8,6 +8,7 @@ import NewMeetup from './routes/NewMeetup.jsx';
 import Favorites from './routes/Favorites.jsx';
 import AllMeetups from './routes/AllMeetups.jsx';
 import RootLayout from './routes/root layout/RootLayout.jsx';
+import { FavoritesContextProvider } from './store/favorites-contex.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <FavoritesContextProvider>
+      <RouterProvider router={router} />
+    </FavoritesContextProvider>
   </React.StrictMode>
 );
